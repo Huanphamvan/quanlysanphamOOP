@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Store</title>
+    <style>
+        center {
+            margin-top: 5%;
+        }
+    .pages{
+        display: flex;
+        justify-content: center;
+    }
+        .page-item {
+            display: block;
+            justify-content: center;
+
+        }
+        .page-item span{
+            border:  1px solid black;
+            width: 30px;
+        }
+        .page-item button{
+            border:  1px solid black;
+            width: 30px;
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<center>
+    <h2>MY STORE</h2>
+    <button onclick="showFormAdd()"> Add product</button>
+    <br>
+    <br>
+
+    <div id="form-add">
+
+
+    </div>
+    <br>
+    <br>
+
+    <div id="form-edit">
+
+    </div>
+
+    <table border="1">
+        <tr>
+            <td colspan="5"><input type="text" style="width:98%" placeholder="Search Input" id="searchInput" oninput="searchProduct()"></td>
+            <td colspan="2"><button style="width: 100%">Search</button></td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Images</th>
+            <th colspan="2">Action</th>
+        </tr>
+
+        <tbody id="list-product">
+
+        </tbody>
+
+    </table>
+
+    <ul id="pages" class="pages">
+
+    </ul>
+
+
+
+
+</center>
+
+
+
+
+<script src="entity/Product.js"></script>
+<script src="manage/Store.js"></script>
+<script src="View/index.js"></script>
+
+</body>
+</html>
